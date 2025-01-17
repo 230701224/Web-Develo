@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css" type="text/css">
+    <title>Converter</title>
+</head>
+<body>
+    <div class="container1">
+        <div class="celcius">
+            <div>
+                <h1>Celcius To Fahrenheit</h1>
+            </div>
+            <div>
+                <input type="text" id="input" place="Celcius To Fahrenheit">
+            </div>
+            <div>
+                <button type="submit" onclick="celfar()">Convert</button>
+            </div>
+            <div id="result">
+
+            </div>
+        </div>
+    </div>
+    <script>
+        function celfar(){
+            const CelVal = Number(document.getElementById("input").value);
+            const Farval = (CelVal*9/5) + 32;
+            const result = document.getElementById("result");
+            result.innerHTML = Farval.toFixed(3) + "Farhenheit";
+        }
+    </script>
+</body>
+</html>
